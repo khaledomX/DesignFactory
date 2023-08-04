@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    font-family: Arial, sans-serif;
+	background-color: #000000;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFFF33;
+    color: #fff;
+    padding: 10px;
+}
+
+section {
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('image1.png');
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: centre;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+	transform: translateY(-50%);
+}
+
+.btn {
+    background-color: #FFFF33;
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+	font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-section {
+    padding: 100px;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-section {
+    background-color: #000000;
+    padding: 100px;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.contact-section {
+    padding: 100px;
+
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+/*==========================*/
+/*=======image-slides=======*/
+/*==========================*/
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides* {
+     user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+	caption-side: top;
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+    
+
+}
+.slide img {
+    width: 90%;
+    height: 90%;
+}
+.slide figcaption {
+    text-align: center;
+    font-size: 18px;
+    text-indent: 0;
+	margin-top: 35px;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6, 
+input#img-1:checked ~ .nav-dots label#img-dot-7,
+input#img-2:checked ~ .nav-dots label#img-dot-8,
+input#img-3:checked ~ .nav-dots label#img-dot-9,
+input#img-4:checked ~ .nav-dots label#img-dot-10,
+input#img-5:checked ~ .nav-dots label#img-dot-11,
+input#img-6:checked ~ .nav-dots label#img-dot-12,
+input#img-1:checked ~ .nav-dots label#img-dot-13,
+input#img-2:checked ~ .nav-dots label#img-dot-14,
+input#img-3:checked ~ .nav-dots label#img-dot-15,
+input#img-4:checked ~ .nav-dots label#img-dot-16,
+input#img-5:checked ~ .nav-dots label#img-dot-17,
+input#img-6:checked ~ .nav-dots label#img-dot-18,
+input#img-1:checked ~ .nav-dots label#img-dot-19,
+input#img-2:checked ~ .nav-dots label#img-dot-20,
+input#img-3:checked ~ .nav-dots label#img-dot-21,
+input#img-4:checked ~ .nav-dots label#img-dot-22 {
+	background: rgba(0, 0, 0, 0.8);
